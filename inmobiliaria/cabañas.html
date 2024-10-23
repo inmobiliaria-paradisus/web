@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cabañas</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<link rel="stylesheet" type="text/css" href="css/proyectos.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <!-- Navigation
+            ==========================================-->
+        <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+          <img  class="logo" src="img/paradisuscontrasteblancobanner.png" style="width: 130px; height: auto;">
+          <div class="container"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+              <div class="phone"><span>LLAME AHORA</span>320-123-4321</div>
+            </div>
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html" class="page-scroll">INICIO</a></li>
+                <li><a href="index.html#contact" class="page-scroll">MAS INFORMACION</a></li>
+              </ul>
+            </div> 
+          </div>
+        </nav>
+            
+
+        <header id="header">
+          <div class="cabañas">
+            <div class="overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 col-md-offset-2 intro-text">
+                    
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+          
+        <div id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-6"> <img src="img/cabañas/TERRANOVAENNEGROPORTADA.png" class="img-responsive" alt=""> </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="about-text">
+                  <h2>CABAÑAS</h2>
+                  <H3>Resort-Terranova</H3>
+                  <p>Cabañas Resort-Terranova es un innovador proyecto inmobiliario diseñado para ofrecer una experiencia de vida moderna y cómoda en Cieneguilla. Este complejo residencial combinará diseño contemporáneo, sostenibilidad y una variedad de servicios para satisfacer las necesidades de familias, profesionales y personas mayores.</p>
+                  <h3>especificaciones:</h3>
+                  <div class="list-style">
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                      <ul>
+                        <li>Lotes desde $7,600.</li>
+                        <li>Cuotas desde $125</li>
+                        <li>Minuta escritura publica</li>
+                        <li>Entregamos boleta o factura</li>
+                        <li>Terrenos desde 60 a 120 m2</li>
+                       
+                      </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12">
+                      <ul>
+                        <li>Lotización</li>
+                        <li>Reservorio de agua y conexiones de tuberías para riego de plantas</li>
+                        <li>Pórtico de ingreso.</li>
+                        <li>Seguridad</li>
+                        <li>Pistas afirmadas</li>
+                        
+                      </ul>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="container">
+          <div class="section-title">
+            <h2>Galeria de Imagenes</h2>
+          </div>
+          <div class="carrusel">
+            <div class="imagenes" id="imagenes">
+                <img src="img/cabañas/20241008_144754.jpg" alt="Imagen 1" class="imagen">
+                <img src="img/cabañas/20241008_145257.jpg" alt="Imagen 2" class="imagen">
+                <img src="img/cabañas/20241008_145259.jpg" alt="Imagen 3" class="imagen">
+                <img src="img/cabañas/20241008_145042.jpg" alt="Imagen 3" class="imagen">
+                <img src="img/cabañas/20241008_145351.jpg" alt="Imagen 3" class="imagen">
+                <img src="img/cabañas/20241008_151037.jpg" alt="Imagen 3" class="imagen">
+                <img src="img/cabañas/20241008_150948.jpg" alt="Imagen 3" class="imagen">
+                <img src="img/cabañas/20241008_150752.jpg" alt="Imagen 3" class="imagen">
+            </div>
+            <div class="botones">
+                <button class="boton" onclick="cambiarImagen(-1)">&#10094;</button>
+                <button class="boton" onclick="cambiarImagen(1)">&#10095;</button>
+            </div>
+        </div>
+    
+        <script>
+            let indice = 0;
+    
+            function cambiarImagen(direccion) {
+                const imagenes = document.getElementById("imagenes");
+                const totalImagenes = imagenes.children.length;
+                indice = (indice + direccion + totalImagenes) % totalImagenes;
+                imagenes.style.transform = `translateX(-${indice * 100}%)`;
+            }
+        </script>
+          </div>
+          
+          <div id="services">
+            <div class="container">
+              <div class="section-title">
+                <h2>CARACTERISTICAS</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/Mantenimiento-de-areas-verdes-20160606080858.jpg" alt=" " style="height: 250px;" > </div>
+                  <div class="service-desc">
+                    <h3>Areas Verdes</h3>
+                    <p>Se va a integrar amplias zonas ajardinadas que no solo embelleceran el paisaje, sino que también ofrecen un refugio de tranquilidad y bienestar. </p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/servicos_basicos.jpg" alt=" " style="height: 250px;"> </div>
+                  <div class="service-desc">
+                    <h3>Servicios Basicos y Ecologicos</h3>
+                    <p> Se implementara una infraestructura completa que incluya suministro de agua potable, energía eléctrica, recolección de residuos y acceso a internet de alta velocidad. Estos servicios estaran diseñados para satisfacer las necesidades diarias de los habitantes, asegurando un entorno funcional y accesible.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/zona_parrillas.jpg" alt=" " style="height: 250px;"> </div>
+                  <div class="service-desc">
+                    <h3>Zona de Parrillas</h3>
+                    <p>La zona de parrillas sera un espacio diseñado para fomentar la convivencia y el esparcimiento entre los residentes de nuestro proyecto inmobiliario. Este área, estara ubicada en medio de las áreas verdes, ofrece un ambiente acogedor y natural, ideal para disfrutar de comidas al aire libre con familiares y amigos.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/zona_juegos.jpg" alt=" "> </div>
+                  <div class="service-desc">
+                    <h3>Juego de Niños</h3>
+                    <p>La zona de juegos para niños sera un espacio diseñado para el desarrollo y la diversión de los más pequeños, promoviendo un ambiente seguro y estimulante. </p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/images.jfif" alt=" "> </div>
+                  <div class="service-desc">
+                    <h3>Lotes para Casa de Campo</h3>
+                    <p>Los lotes para casas de campo están diseñados para ofrecer un estilo de vida tranquilo y en armonía con la naturaleza. Cada lote cuenta con amplias dimensiones, lo que permite a los residentes construir su hogar ideal, rodeado de paisajes naturales y áreas verdes que invitan a la relajación y el disfrute al aire libre.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-media"> <img src="img/cabañas/Iluminacion-solar.jpg" alt="" style="height: 185px;"> </div>
+                  <div class="service-desc">
+                    <h3>Luz-Paneles Solares</h3>
+                    <p>La instalación de paneles solares en este proyecto refleja nuestro compromiso con la sostenibilidad y la eficiencia energética. Estos sistemas están diseñados para aprovechar la energía del sol, transformándola en electricidad limpia y renovable, lo que reduce significativamente el consumo de energía convencional y la huella de carbono de nuestros residentes.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="container">
+            <div class="section-title">
+              <h2>Encuentranos Aqui</h2>
+              <img src="img/cabañas/44a90af1-8fa4-4b5d-827e-d4d95e660499.jfif" id="map">
+            </div>
+            </div>
+
+            <div class="container">
+              <div class="document-section">
+              <div class="section-title">
+                <h2>DOCUMENTOS</h2>
+              </div>
+              <p style="font-size: large;"><i>Aquí puedes encontrar los documentos importantes relacionados con nuestros servicios y propiedades. Haz clic en los enlaces para descargar.</i></p>
+              <ul style="list-style-type: none; padding: 0;">
+                  <li style="font-size: larger;"><a href="documentos/declaracion jurada 1.pdf" target="_blank"><b>Declaracion jurada del Impuesto Predial del Año 2024-Predio Rustico</b></a></li>
+                  <br>
+                  <li style="font-size: larger;"><a href="documentos/declaracion jurada 2.pdf" target="_blank"><b>Declaracion Jurada Del impuesto Predial del Año 2024-Hoja de Resumen</b></a></li>
+                  <br>
+                  <li style="font-size: larger;"><a href="documentos/compra venta de terreno rustico.pdf" target="_blank"><b>Compra-Venta de Terreno Rustico</b></a></li>
+                  <br>
+                  <li style="font-size: larger;"><a href="documentos/constancia de no adeudo.pdf" target="_blank"><b>Constancia de no Adeudo </b></a></li>
+              </ul>
+          </div>
+            </div>
+            
+
+            <div class="container">
+            <div class="lema">
+              <h1>¡ENTREGA INMEDIATA!</h1>
+            </div>
+            </div>
+        
+          
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div id="footer">
+              <div class="container text-center">
+                <p>&copy; 2024 C&I PARADISUS. Todos los derechos reservados </p>
+              </div>
+            </div>
+
+
+
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/nivo-lightbox.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/main.js"></script>
+
+<script>
+  // Función para manejar la visibilidad del texto
+  const handleIntersection = (entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible'); // Activar la animación
+              observer.unobserve(entry.target); // Dejar de observar una vez visible
+          }
+      });
+  };
+
+  // Crear un observador
+  const observer = new IntersectionObserver(handleIntersection);
+
+  // Seleccionar todos los elementos de texto (etiquetas <p>)
+  const texts = document.querySelectorAll('p');
+
+  // Observar cada elemento de texto
+  texts.forEach(text => {
+      observer.observe(text);
+  });
+</script>
+</body>
+</html>
